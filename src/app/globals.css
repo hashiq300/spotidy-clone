@@ -2,7 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body{
-    height: 100%;
-    min-height: 100vh;
+html,
+body {
+  height: 100%;
+  min-height: 100vh;
+}
+
+.thin-scrollbar::-webkit-scrollbar {
+  width: 0.5em;
+
+}
+
+.thin-scrollbar::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  @apply rounded-md;
 }

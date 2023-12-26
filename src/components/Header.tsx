@@ -12,6 +12,7 @@ import { signOut } from "next-auth/react"
 import useAuthModal from "@/hooks/useAuthModal"
 import { Session } from "next-auth"
 import { FaUserAlt } from "react-icons/fa"
+import toast from "react-hot-toast"
 
 
 type HeaderProps = {
@@ -30,6 +31,7 @@ const Header = ({ session }: HeaderProps) => {
 
     const handleLogout = () => {
         signOut()
+        toast.success("Logged out successfully")
         router.push("/")
     }
 
